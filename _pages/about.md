@@ -2,7 +2,7 @@
 title: "About"
 permalink: /about/
 header:
-  image: "niagara_falls.jpg"
+  image: "japan.jpg"
 
 ---
 
