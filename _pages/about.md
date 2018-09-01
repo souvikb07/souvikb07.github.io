@@ -3,7 +3,7 @@ title: "About"
 permalink: /about/
 header:
   image: "japan.jpg"
-
+  caption: "Photo credit: Getty"
 ---
 
 I am an Electrical and Electronics Junior, with a thorough understanding and a keen interest in Data Science.
