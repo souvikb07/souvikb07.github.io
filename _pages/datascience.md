@@ -4,8 +4,8 @@ permalink: /datascience/
 title: "Data Science Posts by Tags"
 author_profile: true
 header:
-  image: "renwick_string.jpg"
-  caption: "Photo credit: Ginny Lehman"
+  image: "data_science.jpg"
+  caption: "Photo credit: Lukas"
 
 ---
 
