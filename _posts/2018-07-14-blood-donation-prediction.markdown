@@ -1,11 +1,10 @@
-
 ---
 title:  "Predicting if a Blood Donor will donate within a given time window"
 date:   2018-07-14
 tags: [machine learning]
 
 header:
-  image: "blood_donation/cover.png"
+  image: "images/blood_donation/cover.png"
   caption: "Photo credit: **Google**"
 
 excerpt: "Random Forest, SVC, Blood Donation"
