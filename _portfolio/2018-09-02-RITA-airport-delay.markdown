@@ -4,7 +4,7 @@ date:   2018-09-02
 tags: [Flight_delays]
 
 header:
-  image: "/RITA-airport-delay/airport_cover.jpg"
+  image: "/images/RITA-airport-delay/airport_cover.jpg"
 
 excerpt: "Flight Delays, Visualization, Tableau"
 ---
