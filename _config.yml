@@ -101,7 +101,7 @@ analytics:
 # Site Author
 author:
   name             : "Souvik Banerjee"
-  avatar           : "bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Scientist"
   location         : "New Delhi, India"
   email            :
