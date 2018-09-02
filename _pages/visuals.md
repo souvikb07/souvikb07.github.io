@@ -4,7 +4,7 @@ permalink: /visuals/
 title: "Visualizations by Tags"
 author_profile: true
 header:
-  image: "vis.jpg"
+  image: "/images/vis.jpg"
   caption: "Photo credit: r/dataisbeautiful"
 
 ---
