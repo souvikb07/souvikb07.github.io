@@ -4,7 +4,7 @@ date:   2018-07-14
 tags: [machine learning]
 
 header:
-  image: "blood_donationcover.jpeg"
+  image: "/images/blood_donationcover.jpeg"
   caption: "Photo credit: **Google**"
 
 excerpt: "Random Forest, SVC, Blood Donation"
