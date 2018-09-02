@@ -2,7 +2,7 @@
 title: "About"
 permalink: /about/
 header:
-  image: "about.jpg"
+  image: "/images/about.jpg"
 ---
 
 I am an Electrical and Electronics Junior, with a thorough understanding and a keen interest in Data Science.
