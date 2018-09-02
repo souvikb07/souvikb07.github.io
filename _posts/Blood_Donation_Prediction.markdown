@@ -11,6 +11,7 @@ header:
 excerpt: "Random Forest, SVC, Blood Donation"
 ---
 
+
 While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves life.
 
 ### Problem
