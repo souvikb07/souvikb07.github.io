@@ -1,5 +1,15 @@
 
-# Predicting if a Blood Donor will donate within a given time window
+---
+title:  "Predicting if a Blood Donor will donate within a given time window"
+date:   2018-07-14
+tags: [machine learning]
+
+header:
+  image: "blood_donation/cover.png"
+  caption: "Photo credit: **Google**"
+
+excerpt: "Random Forest, SVC, Blood Donation"
+---
 
 While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves life.
 
@@ -241,20 +251,6 @@ dataset = dataset.fillna(np.nan)
 # Check for Null values
 dataset.isnull().sum()
 ```
-
-    C:\Anaconda\lib\site-packages\ipykernel_launcher.py:2: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
-    of pandas will change to not sort by default.
-    
-    To accept the future behavior, pass 'sort=False'.
-    
-    To retain the current behavior and silence the warning, pass 'sort=True'.
-    
-      
-    
-
-
-
-
     class                          200
     id                               0
     months_since_first_donation      0
@@ -262,9 +258,6 @@ dataset.isnull().sum()
     num_donations                    0
     vol_donations                    0
     dtype: int64
-
-
-
 
 ```python
 dataset.head()
@@ -360,7 +353,7 @@ g = sns.heatmap(df[["class","months_since_last_donation","num_donations","months
 ```
 
 
-![png](output_14_0.png)
+![png](/images/blood_donation/output_14_0.png?raw=true)
 
 
 Only months_since_first_donation seems to have a significative correlation with the class probability.
@@ -374,7 +367,7 @@ g = g.map(sns.distplot, "num_donations")
 ```
 
 
-![png](output_16_0.png)
+![png](/images/blood_donation/output_16_0.png?raw=true)
 
 
 We notice that num_donations distributions are not the same in the class 1 and class 0 subpopulations. Indeed, there is a peak corresponding to the people who have donated only 0-1 time will not donate blood and who have donated 2-3 will likely donate.
@@ -388,7 +381,7 @@ g = g.map(sns.distplot, "months_since_last_donation")
 ```
 
 
-![png](output_18_0.png)
+![png](/images/blood_donation/output_18_0.png?raw=true)
 
 
 We notice that months_since_last_donation distributions are not the same in the class 1 and class 0 subpopulations. Indeed, there is a peak corresponding to the people who have donated recently(in 1-2 months) will donate blood.
@@ -402,7 +395,7 @@ g = g.map(sns.distplot, "months_since_first_donation")
 ```
 
 
-![png](output_20_0.png)
+![png](/images/blood_donation/output_20_0.png?raw=true)
 
 
 We notice that months_since_first_donation distributions are not the same in the class 1 and class 0 subpopulations. Indeed, there is a peak corresponding to the people who have just donated recently(in 6-20 months) will not donate blood.
@@ -414,7 +407,7 @@ g = g.map(sns.distplot, "vol_donations")
 ```
 
 
-![png](output_22_0.png)
+![png](/images/blood_donation/output_22_0.png?raw=true)
 
 
 Volume donated is also a good feature to know wether the donor will donate or not.
@@ -438,7 +431,7 @@ plt.show();
 
 
 
-![png](output_25_1.png)
+![png](/images/blood_donation/output_25_1.png?raw=true)
 
 
 From the graph we can see that Frequency and monetary values are highly correlated. So we can use only the frequency.
@@ -468,14 +461,6 @@ test = dataset[train_len:]
 test.drop(labels=["class"],axis = 1,inplace=True)
 ```
 
-    C:\Anaconda\lib\site-packages\pandas\core\frame.py:3697: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      errors=errors)
-    
-
-
 ```python
 ## Separate train features and label 
 
@@ -485,15 +470,6 @@ Y_train = train["class"]
 
 X_train = train.drop(labels = ["class"],axis = 1)
 ```
-
-    C:\Anaconda\lib\site-packages\ipykernel_launcher.py:3: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      This is separate from the ipykernel package so we can avoid doing imports until
-    
-
 
 ```python
 # Feature Scaling
@@ -568,7 +544,7 @@ g = g.set_title("Cross validation scores")
 ```
 
 
-![png](output_36_0.png)
+![png](/images/blood_donation/output_36_0.png?raw=true)
 
 
 By seeing the figure we can see that Random Forest, Extra Trees, Gradient Boosting Classifiers will work the best.
@@ -777,19 +753,19 @@ g = plot_learning_curve(gsSVMC.best_estimator_,"SVC learning curves",X_train,Y_t
 ```
 
 
-![png](output_43_0.png)
+![png](/images/blood_donation/output_43_0.png?raw=true)
 
 
 
-![png](output_43_1.png)
+![png](/images/blood_donation/output_43_1.png?raw=true)
 
 
 
-![png](output_43_2.png)
+![png](/images/blood_donation/output_43_2.png?raw=true)
 
 
 
-![png](output_43_3.png)
+![png](/images/blood_donation/output_43_3.png?raw=true)
 
 
  By looking at the learning curve GradientBoosting and ExtraTrees classifiers tend to overfit the training set. According to the growing cross-validation curves Random Forest classifier and SVC seems to better generalize the prediction since the training and cross-validation curves are close together.
