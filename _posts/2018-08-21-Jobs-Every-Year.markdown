@@ -38,8 +38,8 @@ Farming is central to India’s socio-economic development, being the direct sou
 
 2.	Graduates Every Year:
 a.	Age 15-18: The number of students enrolling into 10th and 12th standard eventually complete their education due to the support of                  their parents, the level of difficulty of education being not that high.
-      - i)	Students Completing 10th standard: 18 million (Approximately)
-      - ii)	Students Completing 12th standard: 18 million (Approximately)
+      i.	Students Completing 10th standard: 18 million (Approximately)
+      ii.	Students Completing 12th standard: 18 million (Approximately)
 b.	Age 18-30: Assuming 70% of 30 million students enroll into Diploma Undergraduate, Graduate, Doctorate complete their education is                  equal to 20 million (Approximately).
 c.	Age 30 Above = 75% of 3 million graduate every year = 2 million (Approximately)
 
