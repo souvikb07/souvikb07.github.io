@@ -10,15 +10,23 @@ header:
 excerpt: "Random Forest, SVC, Blood Donation"
 ---
 
-
 While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves life.
 
 ### Problem
-One of the major problem while organising the Blood Donation Camp is to convince the people who were walking near the camp to be a donor. So I thought that if I could predict from the data of the past volunteers that this Donor donor will donate the blood in the upcoming event or not. So I have been collecting data from last 2 years and it was not well organised.
+One of the major problem while organising the Blood Donation Camp was that to convince the people who were walking near the camp to be a donor which results in 70% of the people were not interesting in donating due to reasons like they have work to do, they need to go somewhere etc.
+There's this one time in every year when we organise a blood donation camp in Adarsh Public School, New Delhi on the day of parent teacher meeting, so parents were already told about the donation camp and almost 80-90% of the parents become donors. 
+
+So, I thought that if before organising the event we could we could reach out to the right people before the donation then we will get more donors and can save more lives. As part of making records we were collecting data of the volunteers from last 2 years and contains details of there address but it was not well organised.
 
 So I googled it.
 
 I found the data that I needed from [Drivendata](https://www.drivendata.org/competitions/2/warm-up-predict-blood-donations/data/).
+
+### Use information about each donor's history
+- Months since Last Donation: this is the number of monthis since this donor's most recent donation.
+- Number of Donations: this is the total number of donations that the donor has made.
+- Total Volume Donated: this is the total amound of blood that the donor has donated in cubuc centimeters.
+- Months since First Donation: this is the number of months since the donor's first donation.
 
 # Loading the Data
 
