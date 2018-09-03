@@ -104,7 +104,7 @@ author:
   avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Scientist"
   location         : "New Delhi, India"
-  email            : "saouvik01@gmail.com"
+  email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
