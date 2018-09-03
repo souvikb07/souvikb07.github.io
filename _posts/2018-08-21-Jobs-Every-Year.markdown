@@ -27,7 +27,7 @@ Farming is central to India’s socio-economic development, being the direct sou
 
 ![](/images/jobs_guesstimate/1.png?raw=true)
 
-From the table we can estimate that:
+## From the table we can estimate that:
 1.	Enrollment Every Year:
 - a)	Age 15-18: 6% of total population = 0.06 * 650 = 40 million (approximately)
       This is further divided into 10th and 12th standard.
