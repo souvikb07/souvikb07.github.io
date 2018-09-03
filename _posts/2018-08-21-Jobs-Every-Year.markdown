@@ -4,7 +4,7 @@ date:   2018-08-21
 tags: [Guesstimate]
 
 header:
-  image: "/jobs_guesstimate/images/jobs_estimate.jpg"
+  image: "/images/jobs_guesstimate/jobs_estimate.jpg"
 
 excerpt: "Jobs, Guesstimate"
 ---
