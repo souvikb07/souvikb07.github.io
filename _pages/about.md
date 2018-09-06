@@ -14,5 +14,5 @@ When I am not working or studying, I usually work for the student leg of the Rot
 I am a people’s person - love meeting new people, talking about Data Science and learning new things that catch my fancy; please, feel free to say hello and share an anecdote with me!.
 
 <div id="resume-download">
-<a href="https://drive.google.com/uc?export=download&id=1guMbbK7B-WgBUzNphAhERRt84ZgiruBE" class="btn btn-primary">Download My Resume</a>
+<a href="https://drive.google.com/uc?export=download&id=1QfK-rYmeH1jKgZ7sCdAltypgU7EGII-s" class="btn btn-primary">Download My Resume</a>
 </div>
