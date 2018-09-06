@@ -10,23 +10,50 @@ header:
 excerpt: "Random Forest, SVC, Blood Donation"
 ---
 
-While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves life.
+While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves a life.
+
+While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves a life.
 
 ### Problem
-One of the major problem while organising the Blood Donation Camp was that to convince the people who were walking near the camp to be a donor which results in 70% of the people were not interesting in donating due to reasons like they have work to do, they need to go somewhere etc.
-There's this one time in every year when we organise a blood donation camp in Adarsh Public School, New Delhi on the day of parent teacher meeting, so parents were already told about the donation camp and almost 80-90% of the parents become donors. 
+While organising the Blood Donation Camp one of the major problems was that to convince the people who were walking near the camp to be a donor, which results in 70% of the people were not interesting in donating due to genuine reasons like they have a meeting, they have some urgent work to do etc.
 
-So, I thought that if before organising the event we could we could reach out to the right people before the donation then we will get more donors and can save more lives. As part of making records we were collecting data of the volunteers from last 2 years and contains details of there address but it was not well organised.
+### The Solution
+Every year when we organise a blood donation camp in Adarsh Public School, New Delhi on the day of the parent-teacher meeting we get 40% more donations than most of the times throughout the year. So why did every year on this particular day we have such a successful event? 
 
-So I googled it.
+After a lot of brainstorming, the team of Rotaract club of MSIT came to a conclusion that maybe it's because of the fact that parents were told 1 week before that the school is organising the parents-teachers meeting  and there will also be a blood donation camp in association with the Rotaract club of MSIT and they were regular donors, So parents already knew about the donation camp and they free their schedule to participate for the noble cause and which results in getting more donors doing less amount of publicity. 
 
-I found the data that I needed from [Drivendata](https://www.drivendata.org/competitions/2/warm-up-predict-blood-donations/data/).
+Almost 80-90% of the parents donate blood. So, we thought that if before organising the event we could reach out to the right people before the donation then we will get more donors and can save more lives with less publicity. 
 
-### Use information about each donor's history
+Now you and I know that to do such a prediction we need data but the good thing was that in every blood donation camp the team of Rotaract club collect data consisting of the donor's personal information and health data but the sad part was it was not well organised and we didn't have the information  that when was the last time the donors have donated blood because in every camp the donors were different.
+
+So to get the right data I googled it.
+
+I found the data that I needed from [Drivendata](https://www.drivendata.org/competitions/2/warm-up-predict-blood-donations/data/) and they were also solving the same problem.
+
+### The data consists of information like
 - Months since Last Donation: this is the number of monthis since this donor's most recent donation.
 - Number of Donations: this is the total number of donations that the donor has made.
 - Total Volume Donated: this is the total amound of blood that the donor has donated in cubuc centimeters.
 - Months since First Donation: this is the number of months since the donor's first donation.
+
+### Approach 
+The Donors fall into two categories making this a supervised Classification problem:
+Supervised: given the labels for the training data
+Classification: labels are discrete with 2 values that yes/no, 1/0.
+
+### The general approach to a machine learning problem is:
+
+1) Understand the problem and data descriptions
+
+2) Data cleaning / exploratory data analysis
+
+3) Feature engineering / feature selection
+
+4) Model comparison
+
+5) Model optimization
+
+6) Interpretation of results
 
 # Loading the Data
 
@@ -800,6 +827,7 @@ pred_report.to_csv("final_submission.csv")
 
 # Conclusion
 
-Now we can target the people who are interested in donating blood and which will results in getting more volunteers and we can save more people.
+Now that you and I build this model, So we can predict that in the upcoming blood donation camp who will be interested in donating blood. So we can invite the previous donors to take part in the blood donation camp according to their schedule and it will be 100% volunteer work.
+The amount of data we will collect the better the model will predict which will result in saving more lives. This is the main reason Data is so powerful and can actually save lives.
 
 For those interested, the Jupyter Notebook with all the code can be found in the [Github repository](https://github.com/souvikb07/Predict-Blood-Donations) for this post.
