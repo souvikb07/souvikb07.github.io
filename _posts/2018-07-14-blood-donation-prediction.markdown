@@ -12,8 +12,6 @@ excerpt: "Random Forest, SVC, Blood Donation"
 
 While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves a life.
 
-While working for Rotaract Club of MSIT from last 3 years one of my main responsibility was to organise Blood Donation Camps, and it is an amazing event to organise because it gives you a feeling that you are helping for a right cause which saves a life.
-
 ### Problem
 While organising the Blood Donation Camp one of the major problems was that to convince the people who were walking near the camp to be a donor, which results in 70% of the people were not interesting in donating due to genuine reasons like they have a meeting, they have some urgent work to do etc.
 
