@@ -51,7 +51,7 @@ The Target values represent poverty levels as follows:
 3 = vulnerable households 
 4 = non vulnerable households
 
-The explanations for all 143 columns can be found in the [competition documentation](https://www.kaggle.com/c/costa-rican-household-poverty-prediction) , but a few to note are below:
+The explanations for all 143 columns can be found in the [competition documentation](https://www.kaggle.com/c/costa-rican-household-poverty-prediction/data) , but a few to note are below:
 
 - **Id** : a unique identifier for each individual, this should not be a feature that we use!
 - **idhogar** : a unique identifier for each household. This variable is not a feature, but will be used to group individuals by - household as all individuals in a household will have the same identifier.
