@@ -1,7 +1,7 @@
 ---
 title:  "Costa Rican Household Poverty Level Prediction"
 date:   2018-09-26
-tags: [machine learning][data science][kaggle]
+tags: [machine learning, data science, kaggle]
 
 header:
   image: "/images/costa_rican/cover_pic_cr.jpg"
@@ -10,7 +10,6 @@ header:
 excerpt: "Random Forest, Light GBM, Poverty Level"
 ---
 
-Costa Rican Household Poverty level prediction
 ## Table of Contents
 <ul>
 <li><a href="#intro">1. Introduction</a></li>
