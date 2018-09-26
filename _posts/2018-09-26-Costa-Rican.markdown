@@ -1,5 +1,14 @@
+---
+title:  "Costa Rican Household Poverty Level Prediction"
+date:   2018-09-26
+tags: [machine learning][data science][kaggle]
 
-# Costa Rican Household Poverty Level Prediction
+header:
+  image: "/images/costa_rican/cover_pic_cr.jpg"
+  caption: "Photo credit: **Google**"
+
+excerpt: "Random Forest, Light GBM, Poverty Level"
+---
 
 ## Table of Contents
 <ul>
@@ -1129,7 +1138,7 @@ plt.title('Count of Unique Values in Integer Columns');
 ```
 
 
-![png](output_18_0.png)
+![png](/images/costa_rican/output_18_0.png?raw=true)
 
 
 The columns with only 2 unique values represent Booleans (0 or 1). In a lot of cases, this boolean information is already on a household level. For example, the refrig column says whether or not the household has a refrigerator. When it comes time to make features from the Boolean columns that are on the household level, we will not need to aggregate these. However, the Boolean columns that are on the individual level will need to be aggregated.
@@ -1171,7 +1180,7 @@ plt.subplots_adjust(top = 2)
     
 
 
-![png](output_21_1.png)
+![png](/images/costa_rican/output_21_1.png?raw=true)
 
 
 These plots give us a sense of which variables may be most "relevant" to a model. For example, the  meaneduc, representing the average education of the adults in the household appears to be related to the poverty level: a higher average adult education leads to higher values of the target which are less severe levels of poverty. The theme of the importance of education is one we will come back to again and again in this notebook!
@@ -1446,7 +1455,7 @@ label_counts
 
 
 
-![png](output_32_1.png)
+![png](/images/costa_rican/output_32_1.png?raw=true)
 
 
 By this plot you and I can see that we are dealing with an imbalanced class problem. There are many more households that classify as non vulnerable than in any other category. The extreme poverty class is the smallest.
@@ -1716,7 +1725,7 @@ plot_value_counts(heads, 'v18q1')
 ```
 
 
-![png](output_48_0.png)
+![png](/images/costa_rican/output_48_0.png?raw=true)
 
 
 By looking into the data we can see that the most common number of tablets to own is 1. However, We also need to think about the data that is missing. In this case, it could be that families with a NaN in this category just do not own a tablet! 
@@ -1768,7 +1777,7 @@ plt.title('Home Ownership Status for Households Missing Rent Payments', size = 1
 ```
 
 
-![png](output_54_0.png)
+![png](/images/costa_rican/output_54_0.png?raw=true)
 
 
 The meaning of the home ownership variables:
@@ -1882,7 +1891,7 @@ categorical_plot('rez_esc', 'Target', data);
 ```
 
 
-![png](output_68_0.png)
+![png](/images/costa_rican/output_68_0.png?raw=true)
 
 
 The size of the markers represents the raw count. To read the plot, choose a given y-value and then read across the row. For example, with a poverty level of 1, 93% of individuals have no years behind with a total count of around 800 individuals and about 0.4% of individuals are 5 years behind with about 50 total individuals in this category. This plot attempts to show both the overall counts and the within category proportion.
@@ -1894,7 +1903,7 @@ categorical_plot('escolari', 'Target', data, annotate = False)
 ```
 
 
-![png](output_70_0.png)
+![png](/images/costa_rican/output_70_0.png?raw=true)
 
 
 We will fill in the remaining missing values in each column.
@@ -1907,7 +1916,7 @@ plot_value_counts(data[(data['rez_esc-missing'] == 1)],
 ```
 
 
-![png](output_72_0.png)
+![png](/images/costa_rican/output_72_0.png?raw=true)
 
 
 The distribution here seems to match that for all the data at large.
@@ -1919,7 +1928,7 @@ plot_value_counts(data[(data['v2a1-missing'] == 1)],
 ```
 
 
-![png](output_74_0.png)
+![png](/images/costa_rican/output_74_0.png?raw=true)
 
 
 This looks like it could be an indicator of more poverty given the higher prevalence of 2: moderate poverty.
@@ -2034,7 +2043,7 @@ plt.title('Squared Age versus Age');
 ```
 
 
-![png](output_84_0.png)
+![png](/images/costa_rican/output_84_0.png?raw=true)
 
 
 Highly correlated, and we don't need to keep both in our data. Therefore let's remove it.
@@ -2188,7 +2197,7 @@ sns.heatmap(corr_matrix.loc[corr_matrix['tamhog'].abs() > 0.9, corr_matrix['tamh
 ```
 
 
-![png](output_94_0.png)
+![png](/images/costa_rican/output_94_0.png?raw=true)
 
 
 There are several variables here having to do with the size of the house:
@@ -2223,7 +2232,7 @@ plt.title('Household size vs number of persons living in the household');
     
 
 
-![png](output_97_1.png)
+![png](/images/costa_rican/output_97_1.png?raw=true)
 
 
 We see for a number of cases, there are more people living in the household than there are in the family. 
@@ -2238,7 +2247,7 @@ categorical_plot('hhsize-diff', 'Target', heads)
 ```
 
 
-![png](output_99_0.png)
+![png](/images/costa_rican/output_99_0.png?raw=true)
 
 
 Even though most households do not have a difference, there are a few that have more people living in the household than are members of the household.
@@ -2331,7 +2340,7 @@ categorical_plot('elec', 'Target', heads)
 ```
 
 
-![png](output_105_0.png)
+![png](/images/costa_rican/output_105_0.png?raw=true)
 
 
 We can see that for every value of the Target, the most common source of electricity is from one of the listed providers.
@@ -2382,7 +2391,7 @@ categorical_plot('walls', 'Target', heads)
 ```
 
 
-![png](output_111_0.png)
+![png](/images/costa_rican/output_111_0.png?raw=true)
 
 
 
@@ -2409,7 +2418,7 @@ categorical_plot('walls+roof+floor', 'Target', heads, annotate=False)
 ```
 
 
-![png](output_114_0.png)
+![png](/images/costa_rican/output_114_0.png?raw=true)
 
 
 This new feature may be useful because it seems like a Target of 4 (the lowest poverty level) tends to have higher values of the 'house quality' variable. We can also look at this in a table to get the fine-grained details.
@@ -2502,7 +2511,7 @@ categorical_plot('warning', 'Target', data = heads)
 ```
 
 
-![png](output_119_0.png)
+![png](/images/costa_rican/output_119_0.png?raw=true)
 
 
 Here we can see a high concentration of households that have no warning signs and have the lowest level of poverty and it looks as if this may be a useful feature.
@@ -2527,7 +2536,7 @@ plt.title('Target vs Bonus Variable');
     
 
 
-![png](output_121_1.png)
+![png](/images/costa_rican/output_121_1.png?raw=true)
 
 
 ### Per Capita Features
@@ -2839,7 +2848,7 @@ plt.title('Target vs Dependency');
     
 
 
-![png](output_137_1.png)
+![png](/images/costa_rican/output_137_1.png?raw=true)
 
 
 It's hard to see the relationship, but it's slightly negative: as the **dependency** increases, the value of the **Target** decreases. This actually makes sense as the dependency is the number of dependent individuals divided by the number of non-dependents. As we increase this value, the poverty severty tends to increase: having more dependent family members (who usually are non-working) leads to higher levels of poverty because they must be supported by the non-dependent family members.
@@ -2855,7 +2864,7 @@ plt.title('Target vs Rooms Per Capita');
     
 
 
-![png](output_139_1.png)
+![png](/images/costa_rican/output_139_1.png?raw=true)
 
 
 ### Correlation Heatmap
@@ -2877,7 +2886,7 @@ sns.heatmap(corr_mat, vmin = -0.5, vmax = 0.8, center = 0,
 ```
 
 
-![png](output_141_0.png)
+![png](/images/costa_rican/output_141_0.png?raw=true)
 
 
 This plot shows us that there are a number of variables that have a weak correlation with the Target. There are also high correlations between some variables (such as floor and walls+roof+floor) which could pose an issue because of collinearity.
@@ -3054,7 +3063,7 @@ categorical_plot('inst', 'Target', ind, annotate = False);
 ```
 
 
-![png](output_152_0.png)
+![png](/images/costa_rican/output_152_0.png?raw=true)
 
 
 Higher levels of education seem to correspond to less extreme levels of poverty. We do need to keep in mind this is on an individual level though and we eventually will have to aggregate this data at the household level.
@@ -3071,7 +3080,7 @@ plt.title('Education Distribution by Target');
     
 
 
-![png](output_154_1.png)
+![png](/images/costa_rican/output_154_1.png?raw=true)
 
 
 
@@ -3102,7 +3111,7 @@ sns.violinplot('Target', 'escolari/age', data = ind);
     
 
 
-![png](output_157_1.png)
+![png](/images/costa_rican/output_157_1.png?raw=true)
 
 
 We can also take our new variable, inst, and divide this by the age. The final variable we'll name 
@@ -6559,7 +6568,7 @@ categorical_plot('escolari-max', 'Target', final, annotate=False);
 ```
 
 
-![png](output_176_0.png)
+![png](/images/costa_rican/output_176_0.png?raw=true)
 
 
 
@@ -6574,7 +6583,7 @@ plt.title('Max Schooling by Target');
     
 
 
-![png](output_177_1.png)
+![png](/images/costa_rican/output_177_1.png?raw=true)
 
 
 
@@ -6585,7 +6594,7 @@ plt.title('Max Schooling by Target');
 ```
 
 
-![png](output_178_0.png)
+![png](/images/costa_rican/output_178_0.png?raw=true)
 
 
 
@@ -6597,7 +6606,7 @@ plt.title('Average Schooling by Target');
 ```
 
 
-![png](output_179_0.png)
+![png](/images/costa_rican/output_179_0.png?raw=true)
 
 
 
@@ -6609,7 +6618,7 @@ plt.title('Overcrowding by Target');
 ```
 
 
-![png](output_180_0.png)
+![png](/images/costa_rican/output_180_0.png?raw=true)
 
 
 One other feature that might be useful is the gender of the head of household. Since we aggregated the data, we'll have to go back to the individual level data and find the gender for the head of household.
@@ -6655,7 +6664,7 @@ plt.title('Target by Female Head of Household');
     
 
 
-![png](output_185_1.png)
+![png](/images/costa_rican/output_185_1.png?raw=true)
 
 
 We will also look at the difference in average education by whether or not the family has a female head of household.
@@ -6668,7 +6677,7 @@ plt.title('Average Education by Target and Female Head of Household', size = 16)
 ```
 
 
-![png](output_187_0.png)
+![png](/images/costa_rican/output_187_0.png?raw=true)
 
 
 It looks like at every value of the Target, households with female heads have higher levels of education. Yet, we saw that overall, households with female heads are more likely to have severe poverty.
@@ -6874,11 +6883,11 @@ norm_fi = feature_importances_plot(feature_importances, threshold=0.95)
 ```
 
 
-![png](output_202_0.png)
+![png](/images/costa_rican/output_202_0.png?raw=true)
 
 
 
-![png](output_202_1.png)
+![png](/images/costa_rican/output_202_1.png?raw=true)
 
 
     132 features required for 95% of cumulative importance.
@@ -6904,7 +6913,7 @@ kde_target(final, 'meaneduc')
     
 
 
-![png](output_205_1.png)
+![png](/images/costa_rican/output_205_1.png?raw=true)
 
 
 
@@ -6917,7 +6926,7 @@ kde_target(final, 'escolari/age-range_')
     
 
 
-![png](output_206_1.png)
+![png](/images/costa_rican/output_206_1.png?raw=true)
 
 
 ## Model Selection
@@ -7070,7 +7079,7 @@ model_results.reset_index(inplace = True)
 ```
 
 
-![png](output_223_0.png)
+![png](/images/costa_rican/output_223_0.png?raw=true)
 
 
 The most well performed model seems to be the Random Forest because it does best right out of the box. While we didn't tune any of the hyperparameters so the comparison between models is not perfect, these results reflect those of many other Kaggle competitiors finding that tree-based ensemble methods (including the Gradient Boosting Machine) perform very well on structured datasets. Hyperparameter performance does improve the performance of machine learning models, but we don't have time to try all possible combinations of settings for all models. The graph below ([from the paper by Randal Olson](https://psb.stanford.edu/psb-online/proceedings/psb18/olson.pdf)) shows the effect of hyperparameter tuning versus the default values in Scikit-Learn.
@@ -7238,7 +7247,7 @@ selector.n_features_
 
 
 
-![png](output_240_1.png)
+![png](/images/costa_rican/output_240_1.png?raw=true)
 
 
 From the plot we can see that the score improves as we add features up until around 95 features. According to the selector, this is the optimal number of features.
@@ -7369,7 +7378,7 @@ model_results.reset_index(inplace = True)
 ```
 
 
-![png](output_247_0.png)
+![png](/images/costa_rican/output_247_0.png?raw=true)
 
 
 We can see that the Random Forest model with selected features performs slightly better in cross-validation. We can keep both sets of features for use in our next model, the Gradient Boosting Machine.
@@ -7681,7 +7690,7 @@ plt.suptitle('Distribution of Confidence by Fold and Target', y = 1.05);
     
 
 
-![png](output_258_1.png)
+![png](/images/costa_rican/output_258_1.png?raw=true)
 
 
 What we see here is that the confidence for each class is relatively low. It appears that the model has greater confidence in Target=4 predictions which makes sense because of the class imbalance and the high prevalence of this label.
@@ -7699,7 +7708,7 @@ sns.violinplot(x = 'Target', y = 'confidence', hue = 'fold', data = predictions)
     
 
 
-![png](output_260_1.png)
+![png](/images/costa_rican/output_260_1.png?raw=true)
 
 
 These results show the issue with imbalanced class problems that our model cannot distinguish very well between the classes that are underrepresented
@@ -7732,11 +7741,11 @@ plt.title('Confidence by Target');
     
 
 
-![png](output_262_1.png)
+![png](/images/costa_rican/output_262_1.png?raw=true)
 
 
 
-![png](output_262_2.png)
+![png](/images/costa_rican/output_262_2.png?raw=true)
 
 
 
@@ -7752,11 +7761,11 @@ _ = feature_importances_plot(gbm_fi, threshold=0.95)
 ```
 
 
-![png](output_264_0.png)
+![png](/images/costa_rican/output_264_0.png?raw=true)
 
 
 
-![png](output_264_1.png)
+![png](/images/costa_rican/output_264_1.png?raw=true)
 
 
     89 features required for 95% of cumulative importance.
@@ -7818,7 +7827,7 @@ model_results.reset_index(inplace = True)
 ```
 
 
-![png](output_269_0.png)
+![png](/images/costa_rican/output_269_0.png?raw=true)
 
 
 The massive advantage of the gradient boosting machine is on display here. For a final step, let's try using 10-folds with both sets and add them to the plot.
@@ -7857,7 +7866,7 @@ model_results.reset_index(inplace = True)
 ```
 
 
-![png](output_274_0.png)
+![png](/images/costa_rican/output_274_0.png?raw=true)
 
 
 The best model seems to be the Gradient Boosting Machine trained with 10 folds on the selected features. This model has not yet been optimized, but we might be able to get a little more performance through optimization.
@@ -8261,7 +8270,7 @@ plt.xticks(list(range(1, results['iteration'].max() + 1, 3)));
     
 
 
-![png](output_295_1.png)
+![png](/images/costa_rican/output_295_1.png?raw=true)
 
 
 
@@ -8486,7 +8495,7 @@ _ = feature_importances_plot(gbm_fi)
 ```
 
 
-![png](output_302_0.png)
+![png](/images/costa_rican/output_302_0.png?raw=true)
 
 
 Here we can see that the most important fetures.
@@ -8524,7 +8533,7 @@ plt.title('Predicted Label Distribution');
 ```
 
 
-![png](output_305_0.png)
+![png](/images/costa_rican/output_305_0.png?raw=true)
 
 
 
@@ -8708,7 +8717,7 @@ confusion_matrix_plot(cm, classes = ['Extreme', 'Moderate', 'Vulnerable', 'Non-V
     
 
 
-![png](output_315_1.png)
+![png](/images/costa_rican/output_315_1.png?raw=true)
 
 
 Here we can see that any of the values on the diagonal, the model got correct because the predicted value matches the true value. Anything not on the diagonal our model got wrong which we can assess by looking at the predicted value versus the actual value.
@@ -8732,7 +8741,7 @@ confusion_matrix_plot(cm, normalize = True,
     
 
 
-![png](output_317_1.png)
+![png](/images/costa_rican/output_317_1.png?raw=true)
 
 
 Now we can see that our model really does not do that well for classes other than Non Vulnerable. It only correctly identifies 15% of the Vulnerable households, classifying more of them as moderate or non vulnerable. Overall, these results show that imbalanced classification problems with relatively few observations are very difficult. There are some methods we can take to try and counter this such as oversampling or training multiple models on different sections of the data, but at the end of the day, the most effective method may be to gather more data.
